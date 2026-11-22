@@ -19,7 +19,7 @@ class NewsScreen extends StatelessWidget {
             return ListView.builder(
               itemCount: value.newsModels!.articles.length,
               itemBuilder: (context, index) {
-                return InkWell(
+                return GestureDetector(
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context)=> NewsdetailsScreen(Author: value.newsModels!.articles[index]["author"], Desc: value.newsModels!.articles[index]["description"], Img: value.newsModels!.articles[index]["urlToImage"], NameSource: value.newsModels!.articles[index]["source"]["name"], Title: value.newsModels!.articles[index]["title"], publishedAt: value.newsModels!.articles[index]["publishedAt"]) ));
                   },

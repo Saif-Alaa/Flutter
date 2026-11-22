@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Pages/News_Screen.dart';
 import 'package:flutter_application_1/Pages/Prayers_Screen.dart';
+import 'package:flutter_application_1/Pages/Shop_Screen.dart';
 import 'package:flutter_application_1/Pages/UserInfo.dart';
 import 'package:flutter_application_1/Providers/Users_Provider.dart';
 import 'package:provider/provider.dart';
@@ -78,13 +79,17 @@ class UserScreen extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
-          if (index == 1) {
+          if (index == 2) {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => NewsScreen()),
             );
           }
-
+                 
+                 if(index == 1)
+                 {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ShopScreen()));
+                 }
                    if (index == 0) {
             Navigator.push(
               context,
@@ -98,6 +103,9 @@ class UserScreen extends StatelessWidget {
             label: "Prayers",
           ),
 
+            
+          BottomNavigationBarItem(icon: Icon(Icons.shopify_rounded , size: 17 , color: Colors.black12,) , label: "Shop"),
+     
           BottomNavigationBarItem(
             icon: Icon(Icons.newspaper, size: 17, color: Colors.black12),
             label: "News",

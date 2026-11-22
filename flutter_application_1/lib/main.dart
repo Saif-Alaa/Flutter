@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Pages/SignUp_Screen.dart';
 import 'package:flutter_application_1/Pages/Users_Screen.dart';
 import 'package:flutter_application_1/Providers/Auth_Provider.dart';
+import 'package:flutter_application_1/Providers/Card_Provider.dart';
 import 'package:flutter_application_1/Providers/News_Provider.dart';
 import 'package:flutter_application_1/Providers/Prayers_Provider.dart';
+import 'package:flutter_application_1/Providers/Shop_Provider.dart';
 import 'package:flutter_application_1/Providers/Users_Provider.dart';
 import 'package:provider/provider.dart';
 
@@ -27,6 +29,8 @@ class MyApp extends StatelessWidget {
                 ChangeNotifierProvider(create: (context) => UsersProvider()),
                                 ChangeNotifierProvider(create: (context) => NewsProvider()),
                                 ChangeNotifierProvider(create: (context) => PrayersProvider()),
+                                ChangeNotifierProvider(create: (context) => ShopProvider()),
+                                ChangeNotifierProvider(create: (context) => CardProvider()),
 
 
       ],
